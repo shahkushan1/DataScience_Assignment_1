@@ -7,8 +7,6 @@ def main():
     for line in tweet_file:
        data.append(json.loads(line))
     
-    
-
     term_freq = {}
 
     for i in range(len(data)):
@@ -16,7 +14,7 @@ def main():
         if len(tweet) > 1 :
             tweet_word = data[i]["text"].split()
             for word in tweet_word:
-                if word.encode('utf-8') in term_freq.keys():
+                if word.encode('utf-8') in term_freq.keys():					#Build up a term frequency dict
                     term_freq[word.encode('utf-8')] = term_freq[word.encode('utf-8')] + 1
                 else :
                     term_freq[word.encode('utf-8')] = 1
