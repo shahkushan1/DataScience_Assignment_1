@@ -1,0 +1,6 @@
+r = re.compile( r"([#][\w]+)?"
+r = re.compile( r"([/#][\w]+)?"
+
+text = "this is one #tag and this is ?another tag"
+items = r.findall(text)
+print items
